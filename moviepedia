@@ -1,0 +1,14 @@
+#! /usr/bin/env php
+
+<?php
+
+require 'vendor/autoload.php';
+
+use Acme\ShowCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Moviepedia Demo', '1.0');
+
+$app->add(new ShowCommand);
+
+$app->run();
