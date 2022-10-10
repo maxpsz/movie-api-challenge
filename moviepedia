@@ -9,6 +9,6 @@ use Symfony\Component\Console\Application;
 
 $app = new Application('Moviepedia Demo', '1.0');
 
-$app->add(new ShowCommand);
+$app->add(new ShowCommand(new GuzzleHttp\Client));
 
 $app->run();
